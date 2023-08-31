@@ -8,9 +8,10 @@
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div id ="content" class="container">
         <div class="left_Side">
             <div class="profileText">
                 <div class="imgBx">
@@ -76,9 +77,26 @@
   <div class="about">
     <h2 class="title2">Profile</h2>
     <p>I am a motivated software developer seeking to break into the industry. I possess a variety of skills, 
-        including both frontend and backend devoloping skills and I am eager to learn more.
+        including both frontend and backend developing skills and I am eager to learn more.
     </p>
   </div>
+  <span class="icond"> <i class="fa fa-download"></i><i id="download" class="download"> Download PDF</i></span>
+  
+  <script>
+    document.getElementById("download", "icond").addEventListener("click", function () {
+        const content = document.getElementById("content");
+        const pdfOptions = {
+            margin: 4,
+            filename: "downloaded_pdf.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "mm", format: "A3", orientation: "portrait" }
+        };
+
+        // Generate PDF from content element
+        html2pdf().from(content).set(pdfOptions).save();
+    });
+</script>
   <div class="about">
     <h2 class="title2">Experience</h2>
     <div class="box">
@@ -88,7 +106,7 @@
         </div>
         <div class="text">
             <h4>Server</h4>
-            <p>Worked serving residents at the retirement home. Consisted of taking orders, preparing meals, and 
+            <p>Served residents at retirement home. Consisted of taking orders, preparing meals, and 
                 serving to their tables. </p>
         </div>
     </div>
@@ -99,8 +117,7 @@
     </div>
     <div class="text">
         <h4>IT Assistant</h4>
-        <p>Worked at school's IT department. Helped configure, install, and maintain students' computers for 
-            the upcoming school year. Also did various troubleshooting and assisted students with tech issues. </p>
+        <p>Worked at school's IT department. Configured students' computers. Helped with computer troubleshooting and issues. </p>
     </div>
     </div>
     </div>
@@ -116,7 +133,7 @@
         <li>Python</li>
         <li>PostgreSQL</li>
         <li></li>
-        <li><i>see website for more</i></li>
+        <li><a href='https://rrondev.netlify.app/' target="_blank"><i>see website for more</i></a></li>
         </ul>
     </div>
 
