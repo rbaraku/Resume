@@ -115,8 +115,22 @@ position: relative;
 .contactInfo.education li
 {
 margin-bottom: 15px;
+color: rgb(255, 255, 255);
 
 }
+
+.contactInfo.education ul
+{
+    color: white;
+}
+
+.contactInfo.education p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+
 .contactInfo.education h5
 {
     color: rgb(241, 141, 141);
@@ -127,7 +141,7 @@ margin-bottom: 15px;
     color: rgb(252, 248, 248);
     font-weight: 500;
 }
-.contactInfo.education h4:nth-child(2)
+.contactInfo.education h4:nth-child(4)
 {
 color: #fff;
 font-weight: 300;
@@ -293,3 +307,4 @@ a{
     font-size: 14px;
     font-weight: 500;
 }
+
