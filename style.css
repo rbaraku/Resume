@@ -155,6 +155,14 @@ font-weight: 300;
     background: #fff;
     padding: 40px;
 }
+
+.container .top_center
+{
+    position:absolute;
+    background: #ffffff;
+    padding: 40px;
+    right: 00px;
+}
 .about 
 {
     margin-bottom: 50px;
@@ -276,4 +284,12 @@ a{
     position: absolute;
     right: 60px;
     top: 30px;
+}
+
+.update{
+    position: absolute;
+    right: 275px;
+    top: 30px;
+    font-size: 14px;
+    font-weight: 500;
 }
